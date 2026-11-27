@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IT Service &amp; Asset Assistant</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <main class="app-shell">
+
+        <!-- Application Header -->
+        <header class="app-header">
+
+            <div class="brand-mark">IT</div>
+
+            <div class="brand-info">
+                <p class="eyebrow">NORTHSTAR ENTERPRISE SERVICES</p>
+                <h1>IT Service &amp; Asset Assistant</h1>
+                <p class="subtitle">
+                    Your intelligent workspace for IT support.
+                </p>
+            </div>
+
+            <span class="status-pill">● Local Assistant</span>
+
+        </header>
+
+        <!-- Training Notice -->
+        <section class="notice">
+            <strong>Training environment:</strong>
+            All employee, asset and ticket records are fictional.
+            Incident reports are drafts only and are never submitted
+            to a live service desk.
+        </section>
+
+        <!-- Chat Section -->
+        <section class="chat-card">
+
+            <div class="chat-heading">
+
+                <div>
+                    <h2>Conversation</h2>
+                    <p>How can I help you today?</p>
+                </div>
+
+                <button
+                    id="clearButton"
+                    class="button button-quiet"
+                    type="button">
+                    Clear chat
+                </button>
+
+            </div>
+
+            <!-- Chat Messages -->
+            <div id="chatMessages" class="chat-messages" aria-live="polite">
+
+                <article class="message assistant-message">
+
+                    <div class="message-avatar">AI</div>
+
+                    <div class="message-content">
+                        <span class="message-role">Assistant</span>
+
+                        <p>
+                            Hello! I can help you find IT policy
+                            information, check a device or ticket,
+                            identify a support team, or prepare
+                            an incident draft.
+                        </p>
+                    </div>
+
+                </article>
+
+            </div>
+
+            <!-- Typing Indicator -->
+            <div id="typingIndicator" class="typing-indicator" hidden>
+                Assistant is working...
+            </div>
+
+            <!-- Message Input -->
+            <form id="chatForm" class="composer">
+
+                <label class="sr-only" for="messageInput">
+                    Your message
+                </label>
+
+                <textarea
+                    id="messageInput"
+                    name="message"
+                    rows="2"
+                    maxlength="1200"
+                    placeholder="Ask something about IT support..."
+                    required></textarea>
+
+                <button
+                    id="sendButton"
+                    class="button button-primary"
+                    type="submit">
+                    Send
+                </button>
+
+            </form>
+
+            <!-- Example Questions -->
+            <div class="prompt-area">
+
+                <span class="prompt-label">TRY AN EXAMPLE</span>
+
+                <div class="prompt-chips">
+
+                    <button
+                        class="chip"
+                        type="button"
+                        data-prompt="Show the details of asset AST-1002.">
+                        Check an asset
+                    </button>
+
+                    <button
+                        class="chip"
+                        type="button"
+                        data-prompt="What is the laptop replacement policy?">
+                        Ask an IT policy
+                    </button>
+
+                    <button
+                        class="chip"
+                        type="button"
+                        data-prompt="Find the status of ticket INC-2041.">
+                        Check a ticket
+                    </button>
+
+                    <button
+                        class="chip"
+                        type="button"
+                        data-prompt="Prepare an incident draft for asset AST-1002 because the screen is flickering.">
+                        Prepare incident draft
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Assistant Activity -->
+        <details class="activity-panel">
+
+            <summary>Show assistant activity</summary>
+
+            <p class="activity-help">
+                View the tools used by the assistant to prepare its answer.
+            </p>
+
+            <ol id="activityList" class="activity-list">
+                <li>No activity yet.</li>
+            </ol>
+
+        </details>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            Enterprise AI Training Prototype · Python Backend · Ollama
+        </footer>
+
+    </main>
+
+    <script src="/static/app.js"></script>
+
+</body>
+</html>
