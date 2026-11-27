@@ -2,6 +2,8 @@
 
 ## Project Overview
 
+hi hi 
+
 The Enterprise IT Service & Asset Operations Assistant is a locally running AI-powered application designed to help users with common IT support and asset management queries.
 
 The application uses FastAPI, Ollama, and a local language model. It can retrieve asset and ticket information, identify support teams, search the IT operations knowledge guide, and prepare incident drafts for human review.
